@@ -2,8 +2,8 @@ import inquirer from 'inquirer';
 import fs from 'fs/promises'
 
 
-
-let {title, description, table_of_contents, installation, usage, license, contributing, tests, questions} = await inquirer
+// questions for the user
+let {title, description, installation, usage, license, contributing, tests, userName, userEmail} = await inquirer
     .prompt([
         {
             type: 'input',
@@ -14,11 +14,6 @@ let {title, description, table_of_contents, installation, usage, license, contri
             type: 'input',
             name: 'description',
             message: "Write a Description",
-        },
-        {
-            type: 'input',
-            name: 'table_of_contents',
-            message: "Add table of contents",
         },
         {
             type: 'input',
@@ -34,7 +29,7 @@ let {title, description, table_of_contents, installation, usage, license, contri
             type: 'list',
             name: 'license',
             message: "What License do you want",
-            choices: ['Apache 2.0 License'],
+            choices: ['Apache 2.0 License', 'IBM Public License Version 1.0', 'MIT License', 'Mozilla Public License 2.0'],
         },
         {
             type: 'input',
@@ -48,8 +43,13 @@ let {title, description, table_of_contents, installation, usage, license, contri
         },
         {
             type: 'input',
-            name: 'questions',
-            message: "Questions",
+            name: 'userName',
+            message: "What is your GitHub User Name",
+        },
+        {
+            type: 'input',
+            name: 'userEmail',
+            message: "What is your GitHub email",
         },
     ])
 
@@ -58,20 +58,59 @@ let {title, description, table_of_contents, installation, usage, license, contri
 let readMe = `# ${title}
 
 ## Description
+
 ${description}
 
+## Table of Contents
+
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [How to Contribute](#How_to_Contribute)
+- [Tests](#Tests)
+- [Questions](#Questions)
+
+## Installation
+
+${installation}
+
+## Usage
+
+${usage}
+
+## License
+
 ${generateLicense(license)}
+
+## How to Contribute
+
+${contributing}
+
+## Tests
+
+${tests}
+
+## Questions
+
+[My GitHub Profile](https://github.com/${userName})
+
+Contact me at: ${userEmail}
 `
 
+
+// makes the readme file
 fs.writeFile('README.md', readMe)
 
+
+// adds license badge based on user choice
 function generateLicense() {
     if (license === 'Apache 2.0 License') {
         return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+    } else if (license === 'IBM Public License Version 1.0') {
+        return '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
+    } else if (license === 'MIT License') {
+        return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+    } else if (license === 'Mozilla Public License 2.0') {
+        return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
     }
 }
-
-
-
-
-// console.log(response.title)
