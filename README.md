@@ -22,6 +22,8 @@ N/A
 
 First, clone this repo to your computer. Second, open the directory in your terminal and type 'node index.js'. The program will run and you will follow the on-screen instructions to generate your README.
 
+![readmegen](https://github.com/CameronHack/READMEgenerator/assets/139071966/e7f00321-be85-4c4b-905e-3bbdcaddc1cb)
+
 ## License
 
 MIT License - Permissive free software license
