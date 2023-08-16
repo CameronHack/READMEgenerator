@@ -29,12 +29,16 @@ let {title, description, installation, usage, license, contributing, tests, user
             type: 'list',
             name: 'license',
             message: "What License do you want",
-            choices: ['Apache 2.0 License', 'IBM Public License Version 1.0', 'MIT License', 'Mozilla Public License 2.0'],
+            choices: [
+                'Apache 2.0 License - Permissive free software license',
+                'IBM Public License Version 1.0 - Free open-source software license',
+                'MIT License - Permissive free software license',
+                'Mozilla Public License 2.0 - Free and open-source copyleft license'],
         },
         {
             type: 'input',
             name: 'contributing',
-            message: "Contributing",
+            message: "How to Contribute",
         },
         {
             type: 'input',
@@ -56,6 +60,7 @@ let {title, description, installation, usage, license, contributing, tests, user
 
 // README structure
 let readMe = `# ${title}
+
 
 ## Description
 
@@ -79,6 +84,8 @@ ${installation}
 ${usage}
 
 ## License
+
+${license}
 
 ${generateLicense(license)}
 
@@ -104,13 +111,13 @@ fs.writeFile('README.md', readMe)
 
 // adds license badge based on user choice
 function generateLicense() {
-    if (license === 'Apache 2.0 License') {
+    if (license === 'Apache 2.0 License - Permissive free software license') {
         return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-    } else if (license === 'IBM Public License Version 1.0') {
+    } else if (license === 'IBM Public License Version 1.0 - Free open-source software license') {
         return '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
-    } else if (license === 'MIT License') {
+    } else if (license === 'MIT License - Permissive free software license') {
         return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-    } else if (license === 'Mozilla Public License 2.0') {
+    } else if (license === 'Mozilla Public License 2.0 - Free and open-source copyleft license') {
         return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
     }
 }

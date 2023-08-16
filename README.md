@@ -1,8 +1,9 @@
-# camlol
+# README Generator
+
 
 ## Description
 
-gsitgsebsouj
+The purpose of this README generator is to quickly format and create a new README file based on user input. The program asks the user a series of questions for example 'Give your project a title' will fill in the title given by the user in the generated README.
 
 ## Table of Contents
 
@@ -15,23 +16,25 @@ gsitgsebsouj
 
 ## Installation
 
-sjlenfsjbnfs
+N/A
 
 ## Usage
 
-nlsnefsnfjsn
+First, clone this repo to your computer. Second, open the directory in your terminal and type 'node index.js'. The program will run and you will follow the on-screen instructions to generate your README.
 
 ## License
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+MIT License - Permissive free software license
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## How to Contribute
 
-lsnefsnf
+N/A
 
 ## Tests
 
-jpnpnpisnef
+N/A
 
 ## Questions
 
