@@ -68,12 +68,12 @@ ${description}
 
 ## Table of Contents
 
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [License](#License)
-- [How to Contribute](#How_to_Contribute)
-- [Tests](#Tests)
-- [Questions](#Questions)
+- [Installation](##Installation)
+- [Usage](##Usage)
+- [License](##License)
+- [How to Contribute](##How-to-Contribute)
+- [Tests](##Tests)
+- [Questions](##Questions)
 
 ## Installation
 

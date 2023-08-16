@@ -7,12 +7,12 @@ The purpose of this README generator is to quickly format and create a new READM
 
 ## Table of Contents
 
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [License](#License)
-- [How to Contribute](#How_to_Contribute)
-- [Tests](#Tests)
-- [Questions](#Questions)
+- [Installation](##Installation)
+- [Usage](##Usage)
+- [License](##License)
+- [How to Contribute](##How-to-Contribute)
+- [Tests](##Tests)
+- [Questions](##Questions)
 
 ## Installation
 
