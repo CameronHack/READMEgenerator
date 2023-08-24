@@ -1,5 +1,6 @@
 # README Generator
 
+[Link to Video](https://drive.google.com/file/d/1YtMbl4dKco4ZMdShMkDFKntjsAZ4KOSb/view)
 
 ## Description
 
@@ -10,7 +11,7 @@ The purpose of this README generator is to quickly format and create a new READM
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [How to Contribute](##how-to-contribute)
+- [How to Contribute](#how-to-contribute)
 - [Tests](#tests)
 - [Questions](#questions)
 
