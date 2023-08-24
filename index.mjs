@@ -71,7 +71,7 @@ ${description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [How to Contribute](##how-to-contribute)
+- [How to Contribute](#how-to-contribute)
 - [Tests](#tests)
 - [Questions](#questions)
 
